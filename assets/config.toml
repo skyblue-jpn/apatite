@@ -7,18 +7,18 @@ version = 1
 # How to choose a theme:
 # - "preset"         : use a Base16 preset name (internal or user)
 # - "wallpaper"      : extract Base16 (light/dark) from a wallpaper
-# - "custom"  : provide Base16 colors directly in config
+# - "base16_custom"  : provide Base16 colors directly in config
 mode = "preset"
 preference = "dark"  # "light" or "dark"
 
 [theme.preset]
-dark = "apatite"
-light = "apatite"
+dark = "default"
+light = "default"
 
 [theme.wallpaper]
 path = "~/Pictures/wallpapers/current_wallpaper.jpg"
 
-[theme.custom.dark]
+[theme.base16_custom.dark]
 base00 = "#282c34"
 base01 = "#353b45"
 base02 = "#3e4451"
@@ -36,7 +36,7 @@ base0D = "#61afef"
 base0E = "#c678dd"
 base0F = "#be5046"
 
-[theme.custom.light]
+[theme.base16_custom.light]
 base00 = "#fafafa"
 base01 = "#f0f0f1"
 base02 = "#e5e5e6"
