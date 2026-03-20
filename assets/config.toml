@@ -1,68 +1,58 @@
 # ~/.config/apatite/config.toml
-# Apatite: Unified theme applier for Linux desktops.
+# Apatite: Unified theme applier for Linux desktops. (Base16 schema)
+
+version = 1
 
 [theme]
 # How to choose a theme:
-# - "preset"    : use an existing KDE color scheme (.colors)
-# - "wallpaper" : extract a Material You–style palette from [theme.wallpaper].path
-# - "custom"    : build a palette from the colors defined in [theme.custom]
-mode = "custom"
-
-# System-wide color preference ("dark" or "light")
-# Used for GTK / browser prefer-dark alignment
-preference = "dark"
-
-# ---------------------------------------------------------
-# Per-mode settings (only the selected mode section is read)
-# ---------------------------------------------------------
+# - "preset"         : use a Base16 preset name (internal or user)
+# - "wallpaper"      : extract Base16 (light/dark) from a wallpaper
+# - "custom"  : provide Base16 colors directly in config
+mode = "preset"
+preference = "dark"  # "light" or "dark"
 
 [theme.preset]
-# Theme file name used when mode = "preset"
-# Searched under ~/.local/share/color-schemes/ or /usr/share/color-schemes/
-name = "BreezeDark"
+dark = "apatite"
+light = "apatite"
 
 [theme.wallpaper]
-# Wallpaper path used when mode = "wallpaper"
 path = "~/Pictures/wallpapers/current_wallpaper.jpg"
 
-[theme.custom]
 [theme.custom.dark]
-primary = "#a6e22e"
-on_primary = "#272822"
-secondary = "#66d9ef"
-on_secondary = "#272822"
-tertiary = "#f92672"
-on_tertiary = "#272822"
-error = "#f92672"
-on_error = "#272822"
-surface = "#272822"
-on_surface = "#f8f8f2"
-hover = "#3a3a32"
-on_hover = "#f8f8f2"
-surface_variant = "#3e3d32"
-on_surface_variant = "#a6e22e"
-outline = "#75715e"
-shadow = "#272822"
+base00 = "#282c34"
+base01 = "#353b45"
+base02 = "#3e4451"
+base03 = "#545862"
+base04 = "#565c64"
+base05 = "#abb2bf"
+base06 = "#b6bdca"
+base07 = "#c8ccd4"
+base08 = "#e06c75"
+base09 = "#d19a66"
+base0A = "#e5c07b"
+base0B = "#98c379"
+base0C = "#56b6c2"
+base0D = "#61afef"
+base0E = "#c678dd"
+base0F = "#be5046"
 
 [theme.custom.light]
-primary = "#a6e22e"
-on_primary = "#f8f8f2"
-secondary = "#66d9ef"
-on_secondary = "#f8f8f2"
-tertiary = "#f92672"
-on_tertiary = "#f8f8f2"
-error = "#f92672"
-on_error = "#f8f8f2"
-surface = "#f8f8f2"
-on_surface = "#272822"
-hover = "#e6e1dc"
-on_hover = "#272822"
-surface_variant = "#e6e1dc"
-on_surface_variant = "#272822"
-outline = "#a6e22e"
-shadow = "#d8d8d8"
-
-# Reference: https://github.com/noctalia-dev/noctalia-shell/tree/8344f25d5ab71ed777ec3fbccca897a1c3f6a245/Scripts/python/src/theming
+base00 = "#fafafa"
+base01 = "#f0f0f1"
+base02 = "#e5e5e6"
+base03 = "#a0a1a7"
+base04 = "#696c77"
+base05 = "#383a42"
+base06 = "#202227"
+base07 = "#090a0b"
+base08 = "#ca1243"
+base09 = "#d75f00"
+base0A = "#c18401"
+base0B = "#50a14f"
+base0C = "#0184bc"
+base0D = "#4078f2"
+base0E = "#a626a4"
+base0F = "#986801"
 
 # ---------------------------------------------------------
 # Fonts and assets
@@ -109,6 +99,5 @@ gtk3 = true
 gtk4 = true
 qt5 = true
 qt6 = true
-kdeglobals = true
 fontconfig = true
 xsettingsd = true
